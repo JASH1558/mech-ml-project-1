@@ -20,7 +20,7 @@ class conv(nn.Module):
     def __init__(self):
         super().__init__()
 
-        self.conv=nn.Conv1d(25,64,3,1,1)
+        self.conv=nn.Conv1d(23,64,3,1,1)
         self.batch1=nn.BatchNorm1d(64)
 
     def forward(self,x):

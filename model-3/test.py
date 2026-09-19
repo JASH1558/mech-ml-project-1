@@ -7,7 +7,7 @@ from config import *
 from preprocess import test_data,test_RUL
 
 model=Nura()
-state=torch.load("model.pth")
+state=torch.load("model-3/model_3.pth")
 model.load_state_dict(state_dict=state)
 criterion=nn.MSELoss()
 model.eval()
@@ -28,3 +28,5 @@ with torch.no_grad():
     print("----------------------")
     print(f"Test MSE  : {test_loss.item():.4f}")
     print(f"Test RMSE : {test_rmse.item():.4f}")
+    print(f"Test true RMSE : { 41.799973*test_rmse.item():.4f}")
+

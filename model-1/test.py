@@ -28,5 +28,5 @@ with torch.no_grad():
     print("----------------------")
     print(f"Test MSE  : {test_loss.item():.4f}")
     print(f"Test RMSE : {test_rmse.item():.4f}")
-    print(f"Test true RMSE : {61.92094574156003*test_rmse.item():.4f}")
+    print(f"Test true RMSE : {41.799973*test_rmse.item():.4f}")
 

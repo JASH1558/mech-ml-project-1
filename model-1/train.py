@@ -12,7 +12,6 @@ model=Nura().to(device)
 # model.load_state_dict(state)
 criterion=nn.MSELoss()
 optimizer=optim.Adam(model.parameters(),lr=0.001)
-scheduler=optim.lr_scheduler.StepLR(optimizer,step_size=100,gamma=0.1)
 loader=utilits.DataLoader(train_dataset,batch_size=batch_size,shuffle=True)
 
 if __name__=="__main__":
@@ -42,7 +41,6 @@ if __name__=="__main__":
             num_batches += 1
 
         epoch_loss = running_loss / num_batches
-        scheduler.step()
 
         if (epoch + 1) % 50 == 0:
 

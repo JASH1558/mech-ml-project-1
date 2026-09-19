@@ -12,7 +12,7 @@ model=Nura()
 # model.load_state_dict(state)
 criterion=nn.MSELoss()
 optimizer=optim.Adam(model.parameters(),lr=0.001)
-scheduler=optim.lr_scheduler.StepLR(optimizer,step_size=100,gamma=0.1)
+scheduler=optim.lr_scheduler.StepLR(optimizer,step_size=200,gamma=0.1)
 loader=DataLoader(train_dataset,batch_size=batch_size,shuffle=True)
 
 if __name__=="__main__":
@@ -53,7 +53,7 @@ if __name__=="__main__":
                 f"| Train RMSE: {np.sqrt(epoch_loss):.4f}")
             torch.save(
                 model.state_dict(),
-                "model.pth"
+                "model-3/model_3.pth"
             )
             
 

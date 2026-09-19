@@ -7,7 +7,7 @@ class Nura(nn.Module):
 
         super().__init__()
 
-        self.fc1 = nn.Linear( 25*30,64 )
+        self.fc1 = nn.Linear( 23*30,64 )
 
         self.fc2 = nn.Linear(64,128)
 
